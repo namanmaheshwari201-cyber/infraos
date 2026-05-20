@@ -1,0 +1,28 @@
+{
+  "overview": "InfraOS is India's AI Operating System for Infrastructure — a full-stack enterprise SaaS platform for infrastructure governance, procurement, execution, risk intelligence, and asset lifecycle management. Built for governments, EPCs, ministries, and infrastructure funds.",
+  "features": [
+    "AI Command Center dashboard with real NIP data and KPI analytics",
+    "5 intelligence modules: Procurement, Execution, Commercial Risk, Governance, Asset Intelligence",
+    "National Infrastructure Map with satellite view and project overlays",
+    "AI Copilot powered by Gemini for real-time infrastructure intelligence",
+    "Dynamic organization switcher (MoRTH, NHAI, Smart Cities, NHIDCL)",
+    "35+ real tender entries from major Indian infrastructure authorities",
+    "Vendor Intelligence Graph with contractor risk scoring",
+    "Real-time risk hub with project risk scores and trend sparklines",
+    "Project Audit Trail with timestamped actions and CSV export",
+    "Advanced Analytics Export with multi-sheet data and pivot tables",
+    "All download/export buttons trigger real file downloads with actual data"
+  ],
+  "category": "enterprise-saas",
+  "tags": [
+    "infrastructure",
+    "india",
+    "ai",
+    "enterprise",
+    "dashboard",
+    "procurement",
+    "governance",
+    "saas"
+  ],
+  "last_updated": "2026-05-02T05:59:51.057Z"
+}

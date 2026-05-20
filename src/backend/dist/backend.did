@@ -1,0 +1,101 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type Vendor = 
+ record {
+   activeProjects: nat;
+   avgDelayDays: int;
+   blacklisted: bool;
+   completedProjects: nat;
+   credibilityScore: nat;
+   financialHealth: text;
+   id: text;
+   litigationCount: int;
+   name: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type Tender = 
+ record {
+   clauses: vec text;
+   estimatedValue: float64;
+   fraudRisk: text;
+   id: text;
+   l1Bid: float64;
+   l2Bid: float64;
+   ministry: text;
+   status: text;
+   title: text;
+ };
+type Project = 
+ record {
+   completion: nat;
+   contractor: text;
+   costOverrun: float64;
+   delayDays: int;
+   id: text;
+   name: text;
+   projectType: text;
+   riskScore: nat;
+   state: text;
+   status: text;
+   value: float64;
+ };
+type DashboardStats = 
+ record {
+   arbitrationExposure: float64;
+   costOverruns: float64;
+   delayedProjects: nat;
+   onTrackPercent: nat;
+   totalPipelineValue: float64;
+   totalProjects: nat;
+ };
+type Asset = 
+ record {
+   assetType: text;
+   degradationRate: float64;
+   healthScore: nat;
+   id: text;
+   lastInspection: text;
+   location: text;
+   maintenancePriority: text;
+   name: text;
+   sensorStatus: text;
+ };
+type Alert = 
+ record {
+   alertModule: text;
+   description: text;
+   id: text;
+   project: text;
+   severity: text;
+   timestamp: text;
+ };
+service : {
+  generateAIInsight: (prompt: text) -> (text);
+  getAlerts: () -> (vec Alert);
+  getAssets: () -> (vec Asset);
+  getDashboardStats: () -> (DashboardStats);
+  getProjects: () -> (vec Project);
+  getTenders: () -> (vec Tender);
+  getVendors: () -> (vec Vendor);
+  setGeminiApiKey: (key: text) -> ();
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}
